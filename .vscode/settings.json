@@ -1,0 +1,9 @@
+{
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "scminput": false
+  }
+}

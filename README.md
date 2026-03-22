@@ -1,57 +1,104 @@
-# -Instala-o-e-Configura-o-do-GitHub-Copilot-com-o-VS-Code
+# GitHub Copilot com VS Code
 
-1. Instale o Visual Studio Code
+Este repositorio deixou de ser apenas um passo a passo curto e virou um kit pratico de onboarding para usar o GitHub Copilot com Visual Studio Code. A ideia aqui e ajudar quem esta comecando a instalar, configurar e usar o Copilot de um jeito mais produtivo, com exemplos reais de configuracao, instrucoes de repositorio e materiais de apoio.
 
-Baixe e instale o VS Code do site oficial, se ainda não tiver instalado.
+## O que foi adicionado
 
-2. Instale a Extensão GitHub Copilot
+- guia principal de instalacao e uso
+- checklist de setup
+- troubleshooting para problemas comuns
+- configuracao de workspace em `.vscode`
+- instrucoes de repositorio em `.github/copilot-instructions.md`
+- prompt files para explicacao e revisao
+- exemplos de perfis de configuracao
 
-Abra o VS Code.
+## Estrutura do repositorio
 
-Clique no ícone de Extensões (ou pressione Ctrl+Shift+X).
+- `.vscode/extensions.json`: recomenda as extensoes principais
+- `.vscode/settings.json`: perfil equilibrado para produtividade
+- `.github/copilot-instructions.md`: orienta como o Copilot deve responder dentro do repositorio
+- `.github/prompts`: prompts reutilizaveis para chat no VS Code
+- `docs/checklist-de-instalacao.md`: validacao rapida de setup
+- `docs/troubleshooting.md`: problemas comuns e recuperacao
+- `examples`: perfis prontos de configuracao
 
-Pesquise por "GitHub Copilot".
+## Instalacao e configuracao
 
-Clique em Instalar na extensão oficial do GitHub Copilot.
+1. Instale o Visual Studio Code.
+2. Abra a aba de extensoes.
+3. Instale `GitHub Copilot`.
+4. Instale `GitHub Copilot Chat`.
+5. Faca login com a sua conta GitHub.
+6. Confirme se as extensoes ficaram ativas.
+7. Abra um projeto e teste sugestoes inline.
+8. Abra o chat do Copilot e faca uma pergunta sobre o codigo.
 
-3. Faça Login com sua Conta GitHub
+## Configuracao sugerida
 
-Após instalar, será solicitado que você faça login no GitHub.
+O arquivo `.vscode/settings.json` ja vem com uma base equilibrada:
 
-Clique em Sign in.
+- inline suggestions ativadas
+- next edit suggestions ativadas
+- sugestoes desativadas para `plaintext`
+- sugestoes desativadas para `scminput`
 
-Uma janela do navegador abrirá para você autorizar o acesso do Copilot à sua conta GitHub.
+Isso ajuda a manter o Copilot util em codigo, sem atrapalhar texto livre ou mensagens de commit.
 
-Complete a autorização e retorne ao VS Code.
+## Materiais prontos para uso
 
-Se você não tem assinatura, será inscrito no plano gratuito do Copilot, com limite mensal de sugestões e interações.
+### Instrucoes de repositorio
 
-4. Ative e Configure o Copilot
+Use `.github/copilot-instructions.md` para orientar o comportamento do Copilot no contexto do projeto, por exemplo:
 
-O Copilot já estará ativo por padrão. O ícone do Copilot aparecerá na barra de status.
+- preferir respostas didaticas
+- destacar trade-offs
+- revisar codigo com foco em bugs e testes
+- manter linguagem clara em portugues brasileiro
 
-Para ajustar configurações:
+### Prompt files
 
-Vá em Arquivo > Preferências > Configurações.
+Em `.github/prompts`, o repositorio traz dois atalhos uteis:
 
-Procure por "Copilot" para acessar as opções, como ativar/desativar sugestões automáticas, inline, por linguagem etc.
+- `explicar-codigo.prompt.md`
+- `revisar-alteracoes.prompt.md`
 
-Para ativar/desativar por linguagem, edite o arquivo settings.json ou use o menu de configurações da extensão.
+Eles ajudam a transformar o Copilot Chat em uma ferramenta mais consistente para estudo e revisao.
 
-5. Usando o Copilot
+## Perfis de configuracao
 
-Abra ou crie um arquivo de código.
+Em `examples`, deixei duas opcoes prontas:
 
-Ao digitar, sugestões aparecerão em cinza claro (“ghost text”).
+- `settings-balanced-mode.json`: modo equilibrado para produtividade
+- `settings-learning-mode.json`: modo mais controlado para estudo
 
-Pressione Tab para aceitar, Esc para recusar.
+## Troubleshooting
 
-Para ver outras sugestões, use Alt + [ ou Alt + ] (Windows/Linux) ou Option + [/] (Mac).
+Se algo nao funcionar como esperado:
 
-6. Dicas Extras
+- confira a autenticacao da conta GitHub
+- atualize o VS Code
+- recarregue a janela do editor
+- revise as extensoes instaladas
 
-Para desativar o Copilot em projetos específicos, use o comando “Copilot: Disable for Workspace” na Command Palette (Ctrl+Shift+P).
+O guia completo esta em `docs/troubleshooting.md`.
 
-Para desabilitar globalmente ou por linguagem, ajuste as configurações conforme necessário.
+## Fontes oficiais
 
-Você pode revogar a autorização do Copilot nas configurações de aplicativos do GitHub, se desejar.
+Este material foi reorganizado com base nas documentacoes oficiais do GitHub sobre:
+
+- configuracao e uso do Copilot no editor
+- custom instructions para repositorios
+- troubleshooting de autenticacao e disponibilidade
+
+Referencias:
+
+- [GitHub Docs: Configuring GitHub Copilot in your environment](https://docs.github.com/en/copilot/configuring-github-copilot/configuring-github-copilot-in-your-environment)
+- [GitHub Docs: Adding repository custom instructions for GitHub Copilot](https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions)
+- [GitHub Docs: Troubleshoot common issues with GitHub Copilot](https://docs.github.com/en/copilot/how-tos/troubleshoot-copilot/troubleshoot-common-issues)
+
+## Proximos passos recomendados
+
+- adicionar capturas de tela do fluxo no VS Code
+- incluir versao em ingles do material
+- criar exemplos por linguagem
+- adicionar cenarios de uso para estudo, refatoracao e code review
